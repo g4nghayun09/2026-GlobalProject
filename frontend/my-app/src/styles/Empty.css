@@ -1,0 +1,26 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.no-img{
+    width: 70px;
+    height: 70px;
+    aspect-ratio: 1/1;
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.no-result {
+    color: #777;
+    font-family: "SUIT Variable";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

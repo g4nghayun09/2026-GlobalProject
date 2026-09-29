@@ -12,6 +12,8 @@ import eye from "../assets/Eye.svg";
 import { useState } from 'react';
 import searchIcon from "../assets/Search.svg";
 
+// import Empty from "../components/Empty.jsx";
+
 const situations = [
     { id: 1, img: car, title: '교통사고', txt: '자동차·자전거·보행자 사고 등 교통사고가 발생한 경우', category: '범죄·사고' },
     { id: 2, img: fight, title: '폭행·위협', txt: '폭행을 당했거나 위협을 받고 있을 때', category: '범죄·사고' },
@@ -30,9 +32,10 @@ export default function Home() {
     );
     return (
         <div className='home-card'>
-
+            
             <div className='header-container'>
                 <img src={logo} alt="" className='logo' />
+                {/* <Empty></Empty> */}
             </div>
 
             <div className='callbox-container'>
@@ -75,8 +78,10 @@ export default function Home() {
                         <Situation key={item.id} img={item.img} title={item.title} txt={item.txt} />
                     ))}
                 </div>
+                
 
             </div>
+            
 
         </div>
     );

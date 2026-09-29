@@ -12,6 +12,8 @@ import eye from "../assets/Eye.svg";
 import { useState } from "react";
 import searchIcon from "../assets/Search.svg";
 
+// import Empty from "../components/Empty.jsx";
+
 const situations = [
     {
         id: 1,

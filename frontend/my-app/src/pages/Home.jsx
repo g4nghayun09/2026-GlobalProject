@@ -5,15 +5,9 @@ import logo from "../assets/logo.svg";
 import call from "../assets/bxs_phone-call.svg";
 import Police from "../assets/Police.svg";
 import Emergency from "../assets/Emergency.svg";
-import car from "../assets/Car.svg";
-import fight from "../assets/Fight.svg";
-import fire from "../assets/Fire.svg";
-import eye from "../assets/Eye.svg";
 import { useState } from "react";
 import searchIcon from "../assets/Search.svg";
 import Empty from "../components/Empty.jsx";
-
-// import Empty from "../components/Empty.jsx";
 
 const res = await fetch("https://two026-globalproject.onrender.com/api/cards");
 const situations = await res.json();

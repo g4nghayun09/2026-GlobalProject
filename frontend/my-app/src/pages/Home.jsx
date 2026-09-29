@@ -48,7 +48,7 @@ export default function Home() {
                 </div>
                 <Call
                     img={Police}
-                    number="01080338809"
+                    number="110"
                     goal="경찰"
                     txt="누르면 즉시 연결됩니다"
                 ></Call>

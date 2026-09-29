@@ -22,35 +22,39 @@ export default function Details() {
 
       <div className="details-content">
 
-        <img src={back} alt="" className="back"/>
-        <div>
-          <p className="details-title">교통사고</p>
+        <img src={back} alt="" className="back" />
 
-          <p className="details-txt">
-            자동차·오토바이·자전거·보행자와 관련된 교통사고가
-            발생한 경우
-          </p>
-        </div>
+        <div className="div-main">
+          <div className="div-title">
+            <p className="details-title">교통사고</p>
 
-        <div>
-          <p className="details-way-title">대처방법</p>
+            <p className="details-txt">
+              자동차·오토바이·자전거·보행자와 관련된 교통사고가
+              발생한 경우
+            </p>
+          </div>
 
-          <div className="steps">
-            {steps.map((step, index) => (
-              <div className="step" key={index}>
+          <div>
+            <p className="details-way-title">대처방법</p>
 
-                <span className="step-number">
-                  {index + 1}
-                </span>
+            <div className="steps">
+              {steps.map((step, index) => (
+                <div className="step" key={index}>
 
-                <span className="step-text">
-                  {step}
-                </span>
+                  <span className="step-number">
+                    {index + 1}
+                  </span>
 
-              </div>
-            ))}
+                  <span className="step-text">
+                    {step}
+                  </span>
+
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
 
       </div>
 

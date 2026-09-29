@@ -114,3 +114,91 @@ body {
 .div-main{
     padding: 16px;
 }
+
+/* 일본카드 슬라이더 구현 */
+.jp-slider {
+  display: flex;
+  gap: 16px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  width: 100%;
+  
+  /* 스크롤바 숨기기 */
+  scrollbar-width: none;
+}
+
+.jp-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.jp-slider > * {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/* 신고내용 부분 */
+
+.report-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  color: #777;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.report-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  z-index: 1000;
+}
+
+.report-sheet {
+  width: 390px;
+  min-height: 257px;
+
+  padding: 18px 30px 40px;
+
+  background: white;
+  border-radius: 28px 28px 0 0;
+}
+
+.sheet-handle {
+  width: 48px;
+  height: 5px;
+
+  margin: 0 auto 30px;
+
+  border-radius: 10px;
+  background: #ddd;
+}
+
+.report-title {
+  margin: 0 0 14px;
+
+  color: #777;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.report-sheet ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.report-sheet li {
+  margin-bottom: 7px;
+
+  color: #333;
+  font-size: 13px;
+}

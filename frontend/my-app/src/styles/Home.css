@@ -83,15 +83,29 @@ body {
 }
 
 /* 검색바 (회색 배경 위로 살짝 걸치게) */
-.search-bar {
+.home-search-bar {
+    display: flex;
+    align-items: center;
+    width: 322px;
+    justify-content: space-between;
+    padding: 0 20px 0 28px;
+    height: 48px;
+    margin: -28px auto 0;
+
+    border-radius: 14px;
+    border: 0.5px solid #ededed;
+    background: #fff;
+    box-shadow: 0 5px 11.9px 0 rgba(119, 119, 119, 0.06);
+}
+
+.search-bar.search {
     display: flex;
     align-items: center;
     width: 322px;
     justify-content: space-between;
     padding: 0 20px 0 28px;
     height: 64px;
-    margin: -28px auto 0;
-
+    margin: 0px;
     border-radius: 14px;
     border: 0.5px solid #ededed;
     background: #fff;
@@ -103,7 +117,7 @@ body {
     border: none;
     outline: none;
     background: none;
-    font-size: 16px;
+    font-size: 14px;
     color: #333333;
 }
 
@@ -120,6 +134,7 @@ body {
 /* ===== 탭 ===== */
 .tab-container {
     display: flex;
+    height: 48px;
     justify-content: space-between;
     align-items: center;
     width: 340px;
@@ -135,7 +150,7 @@ body {
     background: none;
     padding: 12px 0;
     border-radius: 999px;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     color: #222222;
     cursor: pointer;
@@ -143,6 +158,13 @@ body {
 }
 
 .tab-btn.active {
+    display: flex;
+    width: 80px;
+    height: 36px;
+    padding: 11px 21px 11px 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     background: #ec5570;
     color: #ffffff;
 }

@@ -6,14 +6,14 @@ body {
 .situation-card {
     display: flex;
     height: 107px;
-    width:340px;
-    padding: 13px 3px 13px 17px;
+    width: 340px;
+    padding: 13px 3px 13px 3px;
     align-items: center;
     gap: 10px;
 
     border-radius: 8px;
-    border: 0.5px solid #FFFFFF;
-    background: #FFFFFF;
+    border: 0.5px solid #ffffff;
+    background: #ffffff;
 }
 
 .s-img {
@@ -22,7 +22,7 @@ body {
 }
 
 .s-title {
-    color: #EA5371;
+    color: #ea5371;
     font-family: "SUIT Variable";
     font-size: 14px;
     font-style: normal;
@@ -49,5 +49,5 @@ body {
     display: flex;
     width: 188px;
     flex-direction: column;
-    gap:8px;
+    gap: 8px;
 }

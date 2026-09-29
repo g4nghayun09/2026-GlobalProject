@@ -61,7 +61,7 @@ export default function Home() {
             </div>
 
             <div className="search-container">
-                <div className="search-bar">
+                <div className="home-search-bar">
                     <input
                         type="text"
                         className="search-input"

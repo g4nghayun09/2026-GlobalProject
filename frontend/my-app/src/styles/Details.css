@@ -114,3 +114,26 @@ body {
 .div-main{
     padding: 16px;
 }
+
+/* 일본카드 슬라이더 구현 */
+.jp-slider {
+  display: flex;
+  gap: 16px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  width: 100%;
+  
+  /* 스크롤바 숨기기 */
+  scrollbar-width: none;
+}
+
+.jp-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.jp-slider > * {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}

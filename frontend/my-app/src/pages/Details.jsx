@@ -3,6 +3,8 @@ import "../styles/Details.css";
 import logo from "../assets/logo.svg";
 import back from "../assets/back-icon.svg";
 
+import JpCard from "../components/JapanCard.jsx";
+
 export default function Details() {
 
   const steps = [
@@ -15,17 +17,17 @@ export default function Details() {
 
   const bold = [110, 119];
 
-function boldWord(step) {
-  const regex = /(110|119)/g;
+  function boldWord(step) {
+    const regex = /(110|119)/g;
 
-  return step.split(regex).map((word, index) => {
-    if (bold.includes(Number(word))) {
-      return <strong key={index}>{word}</strong>;
-    }
+    return step.split(regex).map((word, index) => {
+      if (bold.includes(Number(word))) {
+        return <strong key={index}>{word}</strong>;
+      }
 
-    return word;
-  });
-}
+      return word;
+    });
+  }
   return (
     <div className="details-card">
 
@@ -67,7 +69,13 @@ function boldWord(step) {
             </div>
           </div>
         </div>
-
+        <div className="jp-slider">
+          <JpCard japan="交通事故が起きました。" pronounce="코오츠우 지코가 오키마시타." korea="교통사고가 발생했어요."></JpCard>
+          <JpCard japan="交通事故が起きました。" pronounce="코오츠우 지코가 오키마시타." korea="교통사고가 발생했어요."></JpCard>
+          <JpCard japan="交通事故が起きました。" pronounce="코오츠우 지코가 오키마시타." korea="교통사고가 발생했어요."></JpCard>
+          <JpCard japan="交通事故が起きました。" pronounce="코오츠우 지코가 오키마시타." korea="교통사고가 발생했어요."></JpCard>
+          <JpCard japan="交通事故が起きました。" pronounce="코오츠우 지코가 오키마시타." korea="교통사고가 발생했어요."></JpCard>
+        </div>
 
       </div>
 

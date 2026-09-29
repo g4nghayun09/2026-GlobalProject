@@ -13,6 +13,19 @@ export default function Details() {
     "경찰의 안내에 따라 사고 처리를 진행한다.",
   ];
 
+  const bold = [110, 119];
+
+function boldWord(step) {
+  const regex = /(110|119)/g;
+
+  return step.split(regex).map((word, index) => {
+    if (bold.includes(Number(word))) {
+      return <strong key={index}>{word}</strong>;
+    }
+
+    return word;
+  });
+}
   return (
     <div className="details-card">
 
@@ -46,7 +59,7 @@ export default function Details() {
                   </span>
 
                   <span className="step-text">
-                    {step}
+                    {boldWord(step)}
                   </span>
 
                 </div>

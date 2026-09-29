@@ -16,7 +16,7 @@ export default function Details() {
     "경찰의 안내에 따라 사고 처리를 진행한다.",
   ];
 
-  const bold = [110, 119];
+  const bold = [110, 119, '경찰'];
 
   const [showReport, setShowReport] = useState(false);
 
@@ -52,7 +52,7 @@ export default function Details() {
             </p>
           </div>
 
-          <div>
+          <div className="div-way">
             <p className="details-way-title">대처방법</p>
 
             <div className="steps">

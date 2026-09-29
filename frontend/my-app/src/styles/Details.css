@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     gap: 25px;
     min-height: 100vh;
+    cursor: pointer;
 }
 
 .details-title {
@@ -40,10 +41,9 @@ body {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
 
     margin: 0;
-    line-height: 1;
+    line-height: normal;
 }
 
 .details-way-title {
@@ -55,12 +55,14 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin: 0px;
+    margin-bottom: 13px;
 }
 
 .steps {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .step {
@@ -91,28 +93,30 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    
 }
 
 .details-content {
     display: flex;
     flex-direction: column;
-    gap: 27px;
 }
 
 .back {
     width: 34px;
     height: 34px;
     aspect-ratio: 1/1;
+    margin-bottom: 24px;
 }
 
 .div-title {
     display: flex;
     flex-direction: column;
     gap:20px;
+    margin-bottom: 31px;
 }
 
 .div-main{
-    padding: 16px;
+    padding: 0px 16px;
 }
 
 /* 일본카드 슬라이더 구현 */
@@ -201,4 +205,8 @@ body {
 
   color: #333;
   font-size: 13px;
+}
+
+.div-way{
+  margin-bottom: 55px;
 }

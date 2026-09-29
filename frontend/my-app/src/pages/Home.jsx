@@ -1,5 +1,6 @@
 import '../styles/Home.css';
 import Call from "../components/Call.jsx";
+import Situation from "../components/Situation.jsx";
 import logo from "../assets/logo.svg";
 import call from "../assets/bxs_phone-call.svg";
 import Police from "../assets/Police.svg";
@@ -70,7 +71,9 @@ export default function Home() {
                 </div>
 
                 <div className='situation-list'>
-                    {/* 여기서 filtered.map((item) => <네컴포넌트 key={item.id} ... />) */}
+                    {filtered.map((item) => (
+                        <Situation key={item.id} img={item.img} title={item.title} txt={item.txt} />
+                    ))}
                 </div>
 
             </div>

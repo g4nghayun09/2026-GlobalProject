@@ -1,0 +1,53 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.situation-card {
+    display: flex;
+    height: 107px;
+    width:340px;
+    padding: 13px 3px 13px 17px;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 8px;
+    border: 0.5px solid #FFFFFF;
+    background: #FFFFFF;
+}
+
+.s-img {
+    width: 80px;
+    height: 80px;
+}
+
+.s-title {
+    color: #EA5371;
+    font-family: "SUIT Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+    line-height: 1;
+    margin: 0;
+}
+
+.s-txt {
+    color: #777;
+    font-family: "SUIT Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    line-height: 1;
+    margin: 0;
+}
+
+.s-right {
+    display: flex;
+    width: 188px;
+    flex-direction: column;
+    gap:8px;
+}

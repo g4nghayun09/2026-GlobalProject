@@ -1,0 +1,147 @@
+:root {
+    --background: #F7F7F7;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*---------------------------------- header 부분 ----------------------------------*/
+
+.home-card {
+    display: flex;
+    background-color: var(--background);
+    width: 390px;
+    padding: 28px;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.logo {
+    width: 67px;
+    height: 42px;
+}
+
+/*---------------------------------- callbox 부분 ----------------------------------*/
+
+.callbox-container {
+    display: flex;
+    width: 322px;
+    padding: 22px 22px 23px 17px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+    border-radius: 26px;
+    border: 0.5px solid #F3F3F3;
+    background: #FFF;
+    box-shadow: 0 0 13.5px 0 rgba(119, 119, 119, 0.06);
+}
+
+.emergency-call {
+    color: #ED1E5D;
+    font-family: "SUIT Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 8px;
+}
+
+.cb-title {
+    display: flex;
+    width: 200px;
+    height: 20px;
+    gap: 0px;
+    align-items: center;
+    padding: 0px;
+    
+}
+
+.cb-img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ===== 검색 영역 ===== */
+.search-container {
+    background: #EDEDED;
+    border-radius: 40px 40px 0 0;
+    margin-top: 56px;
+    padding: 0 20px 40px;
+}
+
+/* 검색바 (회색 배경 위로 살짝 걸치게) */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 0 20px 0 28px;
+    height: 64px;
+    margin: -28px 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    color: #333333;
+}
+
+.search-input::placeholder {
+    color: #AAAAAA;
+}
+
+.search-img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+/* ===== 탭 ===== */
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 999px;
+    padding: 8px;
+    margin: 24px 0 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 12px 0;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    background: #EC5570;
+    color: #FFFFFF;
+}
+
+/* ===== 카드 리스트 ===== */
+.situation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

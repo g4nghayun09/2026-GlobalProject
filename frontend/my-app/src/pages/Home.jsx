@@ -24,7 +24,9 @@ export default function Home() {
     const [keyword, setKeyword] = useState("");
 
     const filtered = situations.filter(
-        (item) => activeTab === "전체" || item.category === activeTab,
+        (item) =>
+            (activeTab === "전체" || item.category === activeTab) &&
+            item.title.includes(keyword),
     );
     const tapSelectShow = () => {
         const filteredComponent = filtered.map((item) => (

@@ -1,0 +1,116 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.details-card {
+    display: flex;
+    background-color: var(--background);
+    width: 390px;
+    padding: 28px 28px 0px 28px;
+    flex-direction: column;
+    gap: 25px;
+    min-height: 100vh;
+}
+
+.details-title {
+    align-self: stretch;
+    color: #313131;
+    font-family: "SUIT Variable";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin: 0;
+    line-height: 1;
+}
+
+.details-txt {
+    align-self: stretch;
+
+    color: #777;
+    font-family: "SUIT Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    margin: 0;
+    line-height: 1;
+}
+
+.details-way-title {
+    align-self: stretch;
+
+    color: #949494;
+    font-family: "SUIT Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-number {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    padding: 0 7px 1px 7px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    color: #fff;
+    border-radius: 5px;
+    background: #EA5371;
+}
+
+.step-text {
+    color: #313131;
+    font-family: "SUIT Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.back {
+    width: 34px;
+    height: 34px;
+    aspect-ratio: 1/1;
+}
+
+.div-title {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.div-main{
+    padding: 16px;
+}

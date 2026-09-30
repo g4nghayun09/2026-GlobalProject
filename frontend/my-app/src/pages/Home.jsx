@@ -25,7 +25,7 @@ export default function Home() {
             .then((data) => {
                 setSituations(data);
             });
-    });
+    }, []);
 
     if (situations.length === 0) {
         return <Loading />;
@@ -54,7 +54,8 @@ export default function Home() {
     return (
         <div className="home-card">
             <div className="header-container">
-                <img src={logo} alt="" className="logo" />
+                <img src={logo} alt="" className="logo" 
+                onClick={() => navigate("/")}/>
             </div>
 
             <div className="callbox-container">

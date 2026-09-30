@@ -1,8 +1,21 @@
 import '../styles/Situation.css';
+import { useNavigate } from 'react-router-dom';
 
-export default function CallBox({ img, title, txt }) {
+export default function Situation({ data, img, title, txt }) {
+  let navigate = useNavigate();
+
   return (
-    <div className="situation-card">
+    <div
+      className="situation-card"
+      onClick={() => {
+        navigate('/Details', {
+          state: {
+            present: data
+          },
+        });
+      }}
+    >
+
       <div>
         <img src={img} alt="" className='s-img' />
       </div>

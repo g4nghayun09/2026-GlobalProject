@@ -1,20 +1,17 @@
 import { useState } from "react";
-
+import { useLocation } from 'react-router-dom';
 import "../styles/Details.css";
-
 import logo from "../assets/logo.svg";
 import back from "../assets/back-icon.svg";
-
 import JpCard from "../components/JapanCard.jsx";
 
 export default function Details() {
-  const steps = [
-    "안전한 장소로 이동하고 2차 사고를 피한다.",
-    "부상자가 있으면 119에 신고한다.",
-    "경찰 110에 사고를 신고한다.",
-    "사고 장소와 상황, 상대방 정보를 확인한다.",
-    "경찰의 안내에 따라 사고 처리를 진행한다.",
-  ];
+
+  const location= useLocation();
+  const data = location.state;
+  // console.log(data.present.title);
+  const steps = data.present.howto;
+  const japanc = data.present.expressions;
 
   const bold = [110, 119, '경찰'];
 
@@ -33,6 +30,12 @@ export default function Details() {
     });
   }
 
+  function cardJapan (){
+    return japanc.map((x, index)=>(
+      <JpCard key={index} japan={x.japan} pronounce={x.japan.Pro} korea={x.korea}></JpCard>
+    ));
+  }
+
   return (
     <div className="details-card">
       <div className="dHeader-container">
@@ -44,11 +47,10 @@ export default function Details() {
 
         <div className="div-main">
           <div className="div-title">
-            <p className="details-title">교통사고</p>
+            <p className="details-title">{data.present.title}</p>
 
             <p className="details-txt">
-              자동차·오토바이·자전거·보행자와 관련된 교통사고가
-              발생한 경우
+              {data.present.content}
             </p>
           </div>
 
@@ -73,35 +75,13 @@ export default function Details() {
 
         {/* 일본어 카드 슬라이더 */}
         <div className="jp-slider">
-          <JpCard
+          {/* <JpCard
             japan="交通事故が起きました。"
             pronounce="코오츠우 지코가 오키마시타."
             korea="교통사고가 발생했어요."
-          />
+          /> */}
 
-          <JpCard
-            japan="交通事故が起きました。"
-            pronounce="코오츠우 지코가 오키마시타."
-            korea="교통사고가 발생했어요."
-          />
-
-          <JpCard
-            japan="交通事故が起きました。"
-            pronounce="코오츠우 지코가 오키마시타."
-            korea="교통사고가 발생했어요."
-          />
-
-          <JpCard
-            japan="交通事故が起きました。"
-            pronounce="코오츠우 지코가 오키마시타."
-            korea="교통사고가 발생했어요."
-          />
-
-          <JpCard
-            japan="交通事故が起きました。"
-            pronounce="코오츠우 지코가 오키마시타."
-            korea="교통사고가 발생했어요."
-          />
+            {cardJapan()}
         </div>
 
         {/* 신고 내용 버튼 */}

@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 import "../styles/Details.css";
-
 import logo from "../assets/logo.svg";
 import back from "../assets/back-icon.svg";
-
 import JpCard from "../components/JapanCard.jsx";
 import Loading from "../components/Loading.jsx";
 

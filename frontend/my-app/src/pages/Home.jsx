@@ -38,6 +38,7 @@ export default function Home() {
         const filteredComponent = filtered.map((item) => (
             <Situation
                 key={item.id}
+                id={item.id}
                 img={item.imageUrl}
                 title={item.title}
                 txt={item.content}

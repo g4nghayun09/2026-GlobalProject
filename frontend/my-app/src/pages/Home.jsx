@@ -85,7 +85,16 @@ export default function Home() {
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
                     />
-                    <img src={searchIcon} alt="" className="search-img" />
+                    <img
+                        src={searchIcon}
+                        alt=""
+                        className="search-img"
+                        onClick={() =>
+                            navigate(
+                                `/search?keyword=${encodeURIComponent(keyword)}`,
+                            )
+                        }
+                    />
                 </div>
 
                 <div className="tab-container">

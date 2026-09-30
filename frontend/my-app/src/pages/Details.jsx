@@ -66,7 +66,12 @@ export default function Details() {
     return (
         <div className="details-card">
             <div className="dHeader-container">
-                <img src={logo} alt="" className="logo" />
+                <img
+                    src={logo}
+                    alt=""
+                    className="logo"
+                    onClick={() => navigate("/")}
+                />
             </div>
 
             <div className="details-content">
@@ -100,19 +105,18 @@ export default function Details() {
                                 </div>
                             ))}
                         </div>
+                        {/* 신고 내용 버튼 */}
+                        <button
+                            className="report-button"
+                            onClick={() => setShowReport(true)}
+                        >
+                            ⓘ 신고 내용
+                        </button>
                     </div>
                 </div>
 
                 {/* 일본어 카드 슬라이더 */}
                 <div className="jp-slider">{getJapanCard()}</div>
-
-                {/* 신고 내용 버튼 */}
-                <button
-                    className="report-button"
-                    onClick={() => setShowReport(true)}
-                >
-                    ⓘ 신고 내용
-                </button>
             </div>
 
             {/* 신고 내용 바텀시트 */}

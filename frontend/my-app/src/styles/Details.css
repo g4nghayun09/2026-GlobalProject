@@ -80,6 +80,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    font-weight: 800;
 
     color: #fff;
     border-radius: 5px;
@@ -120,14 +121,14 @@ body {
 
 .jp-slider {
     display: flex;
-    gap: 16px;
+    gap: 8px;
 
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 
     width: 100%;
 
-    padding: 0px 16px;
+    padding: 0px 0px;
 
     scrollbar-width: none;
 }
@@ -136,7 +137,7 @@ body {
     display: none;
 }
 
-.jp-slider>* {
+.jp-slider > * {
     flex-shrink: 0;
     scroll-snap-align: center;
 }
@@ -152,16 +153,18 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2px;
+    margin: 20px 0px;
 
     border-radius: 29px;
-    background: #E3E3E3;
-    border: solid 1px #E3E3E3;
+    background: #e3e3e3;
+    border: solid 1px #e3e3e3;
     color: #777;
     font-family: "SUIT Variable";
     font-size: 10px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    float: right;
 }
 
 .report-overlay {
@@ -238,5 +241,5 @@ body {
 }
 
 .div-way {
-    margin-bottom: 55px;
+    margin-bottom: 75px;
 }

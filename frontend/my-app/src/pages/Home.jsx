@@ -25,7 +25,7 @@ export default function Home() {
             .then((data) => {
                 setSituations(data);
             });
-    });
+    }, []);
 
     if (situations.length === 0) {
         return <Loading />;

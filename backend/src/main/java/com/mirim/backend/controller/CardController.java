@@ -35,11 +35,6 @@ public class CardController {
     @GetMapping("/api/cards/search")
     ResponseEntity<List<Card>> getCardsByKeyword(@RequestParam("keyword") String keyword) {
         var cards = cardService.getCardsByKeyword(keyword);
-
-        if (cards == null) {
-            return ResponseEntity.notFound().build();
-        }
-
         return ResponseEntity.ok(cards);
     }
     @GetMapping("api/cards/{id}")

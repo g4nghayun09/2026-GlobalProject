@@ -266,20 +266,19 @@ public class CardService {
 
     public List<Card> getCardsByCategory(String keyword) {
         List<Card> cardList = new ArrayList<>();
+        if (cardRepository.keywordCheck(keyword)) return cardList;
         for (Card card : cards) {
             if (card.getCategory().equals(keyword)) {
                 cardList.add(card);
             }
         }
 
-        if (cardList.isEmpty()) {
-            return null;
-        }
         return cardList;
     }
 
     public List<Card> getCardsByKeyword(String keyword) {
         List<Card> cardList = new ArrayList<>();
+        if (cardRepository.keywordCheck(keyword)) return cardList;
         for (Card card : cards) {
             if (card.getTitle().contains(keyword)) {
                 cardList.add(card);

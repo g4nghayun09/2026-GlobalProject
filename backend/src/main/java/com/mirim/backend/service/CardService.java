@@ -88,7 +88,7 @@ public class CardService {
             "도주 방향",
             "피해자 및 부상 여부"
         },
-            cardImageUrl[2]
+            cardImageUrl[3]
         ),
         new Card(4, "화재", "건물이나 주변에서 불이 나거나 연기가 발생해 소방의 도움이 필요한 경우", "범죄·사고",
             new String[]{
@@ -109,7 +109,7 @@ public class CardService {
             "건물 안에 사람이 남아 있는지",
             "신고자의 이름과 전화번호"
         },
-            cardImageUrl[3]
+            cardImageUrl[2]
         ),
         new Card(5, "휴대전화 분실", "휴대전화를 분실하거나 도난당한 경우", "분실",
             new String[]{
@@ -131,7 +131,7 @@ public class CardService {
             "마지막으로 확인한 시간",
             "도난이 의심되는 경우 도난 상황"
         },
-            cardImageUrl[4]
+            cardImageUrl[9]
         ),
         new Card(6, "지갑 분실", "지갑, 현금 또는 카드를 분실하거나 도난당한 경우", "분실",
             new String[]{
@@ -153,7 +153,7 @@ public class CardService {
             "마지막으로 확인한 시간",
             "도난이 의심되는 경우 도난 상황"
         },
-            cardImageUrl[5]
+            cardImageUrl[8]
         ),
         new Card(7, "여권 분실", "여권을 분실하거나 도난당한 경우", "분실",
             new String[]{
@@ -175,7 +175,7 @@ public class CardService {
             "여권번호를 알고 있다면 여권번호",
             "도난이 의심되는 경우 도난 상황"
         },
-            cardImageUrl[6]
+            cardImageUrl[10]
         ),
         new Card(8, "소지품 분실", "가방, 의류, 전자기기 등 소지품을 분실하거나 도난당한 경우", "분실",
             new String[]{
@@ -196,7 +196,7 @@ public class CardService {
             "마지막으로 확인한 시간",
             "도난이 의심되는 경우 도난 상황"
         },
-            cardImageUrl[7]
+            cardImageUrl[4]
         ),
         new Card(9, "지진", "지진이 발생해 건물이나 주변 시설의 안전이 우려되는 경우", "자연재해",
             new String[]{
@@ -216,7 +216,7 @@ public class CardService {
             "부상·화재·구조가 필요한 경우에는 119에 신고한다.",
             "범죄나 사고가 발생한 경우에는 110에 신고한다."
         },
-            cardImageUrl[8]
+            cardImageUrl[5]
         ),
         new Card(10, "쓰나미", "지진 등으로 쓰나미가 발생했거나 쓰나미 경보·주의보가 발표된 경우", "자연재해",
             new String[]{
@@ -236,7 +236,7 @@ public class CardService {
             "부상·구조가 필요한 경우에는 119에 신고한다.",
             "쓰나미 경보·주의보와 대피 정보는 기상청 및 지역 당국의 정보를 확인한다."
         },
-            cardImageUrl[9]
+            cardImageUrl[6]
         ),
         new Card(11, "태풍·폭우", "태풍이나 폭우로 강풍·침수·홍수·산사태 등의 위험이 발생한 경우", "자연재해",
             new String[]{
@@ -256,7 +256,7 @@ public class CardService {
             "부상·구조가 필요한 경우에는 119에 신고한다.",
             "기상 경보와 대피 정보는 일본 기상청 및 지역 당국의 정보를 확인한다."
         },
-            cardImageUrl[10]
+            cardImageUrl[7]
         )
     });
 

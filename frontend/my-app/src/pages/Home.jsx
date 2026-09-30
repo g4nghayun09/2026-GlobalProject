@@ -11,7 +11,7 @@ import Empty from "../components/Empty.jsx";
 
 const res = await fetch("https://two026-globalproject.onrender.com/api/cards");
 const situations = await res.json();
-const tabs = ["전체", "범죄·사고", "분실·도난", "자연재해"];
+const tabs = ["전체", "범죄·사고", "분실", "자연재해"];
 
 export default function Home() {
     const [activeTab, setActiveTab] = useState("전체");

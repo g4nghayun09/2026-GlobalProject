@@ -35,13 +35,6 @@ export default function Home() {
             return <Empty />;
         }
     };
-    console.log(
-        situations.map((item) => ({
-            id: item.id,
-            title: item.title,
-            imageUrl: item.imageUrl,
-        })),
-    );
     return (
         <div className="home-card">
             <div className="header-container">

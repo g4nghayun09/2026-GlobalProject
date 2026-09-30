@@ -136,7 +136,7 @@ body {
     display: none;
 }
 
-.jp-slider > * {
+.jp-slider>* {
     flex-shrink: 0;
     scroll-snap-align: center;
 }
@@ -144,13 +144,24 @@ body {
 /* 신고내용 부분 */
 
 .report-button {
-    border: none;
-    background: transparent;
-    padding-top: 12px;
-
-    color: #777;
-    font-size: 11px;
     cursor: pointer;
+
+    display: flex;
+    width: 65px;
+    height: 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    border-radius: 29px;
+    background: #E3E3E3;
+    border: solid 1px #E3E3E3;
+    color: #777;
+    font-family: "SUIT Variable";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .report-overlay {

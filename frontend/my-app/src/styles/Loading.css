@@ -10,9 +10,25 @@
 
 .load-img {
     width: 100px;
+    animation: floating 2s ease-in-out infinite;
 }
 
 .load-text {
     margin-top: 20px;
     font-family: "SUIT Variable";
+}
+
+@keyframes floating {
+    0% {
+        /* 시작 위치 */
+        transform: translateY(0);
+    }
+    50% {
+        /* 가장 높이 올라갔을 때 위치 (원하는 만큼 수치 조절 가능) */
+        transform: translateY(-15px);
+    }
+    100% {
+        /* 다시 제자리로 돌아옴 */
+        transform: translateY(0);
+    }
 }

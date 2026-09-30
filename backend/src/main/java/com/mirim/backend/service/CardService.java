@@ -266,7 +266,7 @@ public class CardService {
 
     public List<Card> getCardsByCategory(String keyword) {
         List<Card> cardList = new ArrayList<>();
-        if (cardRepository.keywordCheck(keyword)) return cardList;
+        if (cardRepository.isValidKeyword(keyword)) return cardList;
         for (Card card : cards) {
             if (card.getCategory().equals(keyword)) {
                 cardList.add(card);
@@ -278,7 +278,7 @@ public class CardService {
 
     public List<Card> getCardsByKeyword(String keyword) {
         List<Card> cardList = new ArrayList<>();
-        if (cardRepository.keywordCheck(keyword)) return cardList;
+        if (cardRepository.isValidKeyword(keyword)) return cardList;
         for (Card card : cards) {
             if (card.getTitle().contains(keyword)) {
                 cardList.add(card);

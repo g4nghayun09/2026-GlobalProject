@@ -7,9 +7,10 @@ body {
     display: flex;
     height: 107px;
     width: 340px;
-    padding: 13px 3px 13px 3px;
+    padding: 13px 0px 13px 17px;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 
     border-radius: 8px;
     border: 0.5px solid #ffffff;
@@ -41,13 +42,13 @@ body {
     font-weight: 600;
     line-height: normal;
 
-    line-height: 1;
+    line-height: normal;
     margin: 0;
 }
 
 .s-right {
     display: flex;
-    width: 188px;
+    width: 200px;
     flex-direction: column;
     gap: 8px;
 }

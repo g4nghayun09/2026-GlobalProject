@@ -40,6 +40,7 @@ export default function Search() {
                 img={item.imageUrl}
                 title={item.title}
                 txt={item.content}
+                onClick={() => navigate(`/Details/${item.id}`)}
             />
         ));
     };

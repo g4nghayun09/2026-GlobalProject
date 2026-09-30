@@ -21,7 +21,7 @@ export default function Search() {
 
     useEffect(() => {
         fetch(
-            `https://two026-globalproject.onrender.com/api/cards/search?keyword=${encodeURIComponent(keyword.split())}`,
+            `https://two026-globalproject.onrender.com/api/cards/search?keyword=${encodeURIComponent(keyword.trim())}`,
         )
             .then((res) => res.json())
             .then((data) => {

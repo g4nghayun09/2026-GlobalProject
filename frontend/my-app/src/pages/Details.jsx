@@ -66,7 +66,8 @@ export default function Details() {
     return (
         <div className="details-card">
             <div className="dHeader-container">
-                <img src={logo} alt="" className="logo" />
+                <img src={logo} alt="" className="logo" 
+                onClick={() => navigate("/")}/>
             </div>
 
             <div className="details-content">

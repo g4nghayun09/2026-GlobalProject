@@ -281,7 +281,7 @@ public class CardService {
     public List<Card> getCardsByKeyword(String keyword) {
         List<Card> cardList = new ArrayList<>();
         for (Card card : cards) {
-            if (card.getTitle().equals(keyword)) {
+            if (card.getTitle().contains(keyword)) {
                 cardList.add(card);
             }
         }

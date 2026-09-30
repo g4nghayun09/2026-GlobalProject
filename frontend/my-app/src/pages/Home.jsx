@@ -5,17 +5,31 @@ import logo from "../assets/logo.svg";
 import call from "../assets/bxs_phone-call.svg";
 import Police from "../assets/Police.svg";
 import Emergency from "../assets/Emergency.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import searchIcon from "../assets/Search.svg";
 import Empty from "../components/Empty.jsx";
+import { useNavigate } from "react-router-dom";
+import Loading from "../components/Loading.jsx";
 
-const res = await fetch("https://two026-globalproject.onrender.com/api/cards");
-const situations = await res.json();
 const tabs = ["전체", "범죄·사고", "분실", "자연재해"];
 
 export default function Home() {
     const [activeTab, setActiveTab] = useState("전체");
     const [keyword, setKeyword] = useState("");
+    const [situations, setSituations] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch(`https://two026-globalproject.onrender.com/api/cards`)
+            .then((res) => res.json())
+            .then((data) => {
+                setSituations(data);
+            });
+    });
+
+    if (situations.length === 0) {
+        return <Loading />;
+    }
 
     const filtered = situations.filter(
         (item) => activeTab === "전체" || item.category === activeTab,
@@ -27,6 +41,7 @@ export default function Home() {
                 img={item.imageUrl}
                 title={item.title}
                 txt={item.content}
+                onClick={() => navigate(`/Details/${item.id}`)}
             />
         ));
         if (filteredComponent.length != 0) {

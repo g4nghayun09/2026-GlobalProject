@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 import "../styles/Details.css";
 
@@ -6,19 +7,27 @@ import logo from "../assets/logo.svg";
 import back from "../assets/back-icon.svg";
 
 import JpCard from "../components/JapanCard.jsx";
+import Loading from "../components/Loading.jsx";
 
 export default function Details() {
-    const steps = [
-        "안전한 장소로 이동하고 2차 사고를 피한다.",
-        "부상자가 있으면 119에 신고한다.",
-        "경찰 110에 사고를 신고한다.",
-        "사고 장소와 상황, 상대방 정보를 확인한다.",
-        "경찰의 안내에 따라 사고 처리를 진행한다.",
-    ];
-
-    const bold = [110, 119, "경찰"];
-
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const [situation, setSituation] = useState(null);
     const [showReport, setShowReport] = useState(false);
+    useEffect(() => {
+        fetch(`https://two026-globalproject.onrender.com/api/cards/${id}`)
+            .then((res) => res.json())
+            .then((data) => {
+                setSituation(data);
+            });
+    }, [id]);
+
+    if (!situation) {
+        return <Loading />;
+    }
+
+    const steps = situation.howto;
+    const bold = [110, 119, "경찰"];
 
     // 110, 119만 굵게 만드는 함수
     function boldWord(step) {
@@ -33,6 +42,29 @@ export default function Details() {
         });
     }
 
+    const getJapanCard = () => {
+        const result = [];
+
+        for (let i = 0; i < situation.expressions.length; i++) {
+            result.push(
+                <JpCard
+                    key={situation.expressions[i].id}
+                    japan={situation.expressions[i].japan}
+                    pronounce={situation.expressions[i].japanPro}
+                    korea={situation.expressions[i].korea}
+                />,
+            );
+        }
+
+        return result;
+    };
+
+    const getReport = () => {
+        return situation.report.map((item, index) => {
+            return <li key={index}>{item}</li>;
+        });
+    };
+
     return (
         <div className="details-card">
             <div className="dHeader-container">
@@ -40,16 +72,18 @@ export default function Details() {
             </div>
 
             <div className="details-content">
-                <img src={back} alt="" className="back" />
+                <img
+                    src={back}
+                    alt=""
+                    className="back"
+                    onClick={() => navigate("/")}
+                />
 
                 <div className="div-main">
                     <div className="div-title">
-                        <p className="details-title">교통사고</p>
+                        <p className="details-title">{situation.title}</p>
 
-                        <p className="details-txt">
-                            자동차·오토바이·자전거·보행자와 관련된 교통사고가
-                            발생한 경우
-                        </p>
+                        <p className="details-txt">{situation.content}</p>
                     </div>
 
                     <div className="div-way">
@@ -72,37 +106,7 @@ export default function Details() {
                 </div>
 
                 {/* 일본어 카드 슬라이더 */}
-                <div className="jp-slider">
-                    <JpCard
-                        japan="交通事故が起きました。"
-                        pronounce="코오츠우 지코가 오키마시타."
-                        korea="교통사고가 발생했어요."
-                    />
-
-                    <JpCard
-                        japan="交通事故が起きました。"
-                        pronounce="코오츠우 지코가 오키마시타."
-                        korea="교통사고가 발생했어요."
-                    />
-
-                    <JpCard
-                        japan="交通事故が起きました。"
-                        pronounce="코오츠우 지코가 오키마시타."
-                        korea="교통사고가 발생했어요."
-                    />
-
-                    <JpCard
-                        japan="交通事故が起きました。"
-                        pronounce="코오츠우 지코가 오키마시타."
-                        korea="교통사고가 발생했어요."
-                    />
-
-                    <JpCard
-                        japan="交通事故が起きました。"
-                        pronounce="코오츠우 지코가 오키마시타."
-                        korea="교통사고가 발생했어요."
-                    />
-                </div>
+                <div className="jp-slider">{getJapanCard()}</div>
 
                 {/* 신고 내용 버튼 */}
                 <button
@@ -126,13 +130,7 @@ export default function Details() {
 
                     <p className="report-title">신고 내용</p>
 
-                    <ul>
-                        <li>사고가 발생한 장소</li>
-                        <li>사고가 발생한 시간</li>
-                        <li>사고 상황</li>
-                        <li>차량·자전거 등의 종류</li>
-                        <li>상대방의 특징 및 차량 정보</li>
-                    </ul>
+                    <ul>{getReport()}</ul>
                 </div>
             </div>
         </div>

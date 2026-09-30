@@ -286,9 +286,6 @@ public class CardService {
             }
         }
 
-        if (cardList.isEmpty()) {
-            return null;
-        }
         return cardList;
     }
 

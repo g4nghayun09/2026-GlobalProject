@@ -54,28 +54,30 @@ export default function Home() {
     return (
         <div className="home-card">
             <div className="header-container">
-                <img src={logo} alt="" className="logo" 
-                onClick={() => navigate("/")}/>
+                <img src={logo} alt="" className="logo"
+                    onClick={() => navigate("/")} />
+            </div>
+            <div className="callbox-layout">
+                <div className="callbox-container">
+                    <div className="cb-title">
+                        <img src={call} alt="" className="cb-img" />
+                        <p className="emergency-call">긴급 전화</p>
+                    </div>
+                    <Call
+                        img={Police}
+                        number="110"
+                        goal="경찰"
+                        txt="누르면 즉시 연결됩니다"
+                    ></Call>
+                    <Call
+                        img={Emergency}
+                        number="119"
+                        goal="구급 · 소방"
+                        txt="누르면 즉시 연결됩니다"
+                    ></Call>
+                </div>
             </div>
 
-            <div className="callbox-container">
-                <div className="cb-title">
-                    <img src={call} alt="" className="cb-img" />
-                    <p className="emergency-call">긴급 전화</p>
-                </div>
-                <Call
-                    img={Police}
-                    number="110"
-                    goal="경찰"
-                    txt="누르면 즉시 연결됩니다"
-                ></Call>
-                <Call
-                    img={Emergency}
-                    number="119"
-                    goal="구급 · 소방"
-                    txt="누르면 즉시 연결됩니다"
-                ></Call>
-            </div>
 
             <div className="search-container">
                 <div className="home-search-bar">

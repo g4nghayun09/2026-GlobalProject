@@ -33,6 +33,12 @@ body {
 
 /*---------------------------------- callbox 부분 ----------------------------------*/
 
+.callbox-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .callbox-container {
     display: flex;
     width: 322px;
